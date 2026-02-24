@@ -46,8 +46,8 @@ rule kallisto:
 rule kallisto_quant:
     input: 
         index = "GCF_000845245.1_index.idx",
-        r1 = "sample_data/{sample}_1.fastq",
-        r2 = "sample_data/{sample}_2.fastq"
+        r1 = "data/{sample}_1.fastq",
+        r2 = "data/{sample}_2.fastq"
     output: directory("results/{sample}")
     shell: "kallisto quant -i {input.index} -o {output} -b 30 {input.r1} {input.r2}"
 
@@ -67,8 +67,8 @@ rule bowtie_index:
 
 rule bowtie_map:
     input:
-        r1 = "sample_data/{sample}_1.fastq",
-        r2 = "sample_data/{sample}_2.fastq",
+        r1 = "data/{sample}_1.fastq",
+        r2 = "data/{sample}_2.fastq",
         index = "hcmv_idx.1.bt2"
     output:
         sam = "mapped_{sample}.sam",
@@ -79,7 +79,7 @@ rule bowtie_map:
 #Rule 6: count read pairs before and after filtering (mapping statistics)
 rule map_stats:
     input:
-        before = "sample_data/{sample}_1.fastq",
+        before = "data/{sample}_1.fastq",
         after = "mapped_{sample}_1.fq"
     output: 
         stats = "{sample}_mapping_stats.txt"
