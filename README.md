@@ -22,7 +22,7 @@ cd Comp_Bio_project
 2. Place your raw fastq files in a directory named data/ (test data set is already included).
 3. Ensure your metadata.txt file is present in the main directory. It should look something like this with tab delimited spaces:
 
-| Sample | condition | path |
+| sample | condition | path |
 |----------|----------|----------|
 | SRR5660030| 2dpi | results/SRR5660030 |
 | SRR5660033 | 6dpi | results/SRR5660033 |
