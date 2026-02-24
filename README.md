@@ -3,7 +3,7 @@
 This project provides a Snakemake pipeline for analyzing the transcriptome of Human Cytomegalovirus (HCMV) across two conditions (2 days post-infection and 6 days post-infection).
 
 # Dependencies
-To run this pipeline, you must have the following tools installed: Python 3.x, Snakemake, Biopython, Kallisto, Sleuth (R package), Bowtie2, SPAdes, NCBI Datasets CLI, BLAST+: For sequence identification.
+To run this pipeline, you must have the following tools installed: Python 3.x, Snakemake, Biopython, Kallisto, Sleuth (R package), Bowtie2, SPAdes, NCBI Datasets CLI, BLAST+.
 
 # Installation
 If using Conda, you can install most dependencies with:
